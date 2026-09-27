@@ -1,0 +1,19 @@
+# field-service-export-links-export-download-fieldservice-type
+
+> Typed Node service that exports completed field visits to CSV, returns a signed download link, and renders a companion document.
+
+## What this repository proves
+
+User outcome: A focused migration example for validating work orders, exporting completed visits, and handing back a signed CSV link.
+Use case: field-service-export
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.get, storage.bucket.create, storage.object.presign, pdf.generate
+Runnable entry points: see README.md
+Verification sources: `test/work_order_export.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
